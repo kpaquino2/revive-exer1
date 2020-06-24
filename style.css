@@ -1,3 +1,23 @@
-.navbar-light .navbar-nav .nav-link.active{
+html, body {
+  height: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
   color: #00acee !important;
+}
+
+.fab {
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:80px;
+	right:20px;
+	background-color:#00acee;
+	color:white;
+	border-radius:50px;
+	text-align:center;
+}
+
+.fab-logo {
+  margin-top: 22px;
 }
