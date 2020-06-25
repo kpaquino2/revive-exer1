@@ -76,12 +76,10 @@ p {
 
 .tweet {
 	padding-bottom: 10px;
+	word-wrap: break-word;
+	width: 100%;
 }
 
 .img-tweet {
 	border-radius: 15px;
-}
-
-.empty {
-	
 }
