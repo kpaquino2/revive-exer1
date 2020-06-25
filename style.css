@@ -2,8 +2,18 @@ html, body {
   height: 100%;
 }
 
+body {
+	font-family: sans-serif;
+	padding-top: 65px;
+}
+
+
 .navbar-light .navbar-nav .nav-link.active {
   color: #00acee !important;
+}
+
+.navbar-light .navbar-text {
+    color: black;
 }
 
 .fab {
@@ -20,4 +30,22 @@ html, body {
 
 .fab-logo {
   margin-top: 22px;
+}
+
+.btn-tweet {
+	border-radius: 40px;
+	background: #00acee;
+	border: 0px;
+	font-size: 14px;
+}
+
+textarea {
+    box-shadow: none !important;
+	border-color:white !important;
+	resize: none;
+	padding-left: 0rem !important;
+}
+
+.fa-blue {
+	color: #00acee
 }

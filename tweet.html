@@ -9,24 +9,36 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Twitter</title>
+    <title>Compose new Tweet / Twitter</title>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-light bg-light border-bottom">
-        <a class="navbar-brand" href="#">
-            <img src="source/icon.png" width="30" height="30" alt="">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-arrow-left fa-md fa-blue"></i>
         </a>
-        <span class="navbar-text">Latest Tweets</span>
-        <i class="far fa-moon fa-lg" style="color:#00acee"></i>
+        <button type="button" class="btn btn-primary btn-tweet font-weight-bold">Tweet</button>
     </nav>
-    <a href="" class="fab shadow-sm"><i class="fas fa-feather-alt fa-lg fab-logo"></i></a>
-    <nav class="navbar navbar-expand fixed-bottom bg-light navbar-light justify-content-center border-top">
-        <div class="navbar-nav justify-content-around w-100">
-            <a class="nav-link active" href=""><i class="fas fa-home fa-lg"></i></a>
-            <a class="nav-link" href=""><i class="fas fa-search fa-lg"></i></a>
-            <a class="nav-link" href=""><i class="far fa-bell fa-lg"></i></a>
-            <a class="nav-link" href=""><i class="far fa-envelope fa-lg"></i></a>
+    <div class="container h-100">
+      <div class="row">
+        <div class="col-2">
+          <img src="source/icon.png" width="50" height="50" alt="">
         </div>
-    </nav>
+        <div class="col">
+          <form>
+            <div class="form-group">
+              <textarea class="form-control" rows=5 placeholder="What's happening?"></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4 d-flex justify-content-around">
+          <i class="far fa-image fa-lg fa-blue"></i>
+          <i class="fas fa-chart-bar fa-lg fa-blue"></i>
+          <i class="far fa-calendar-alt fa-lg fa-blue"></i>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
