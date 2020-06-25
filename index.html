@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/82655cad0e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
     <title>Home / Twitter</title>
   </head>
   <body>
+    
     <!-- TOP NAVBAR -->
-    <nav class="navbar fixed-top navbar-light bg-light border-bottom">
+    <nav class="navbar fixed-top navbar-light bg-light border-bottom" id="topBar">
       <a href="#">
         <img src="source/icon.png" width="30" height="30" alt="">
       </a>
@@ -21,149 +23,177 @@
       <i class="far fa-moon fa-lg fa-blue"></i>
     </nav>
 
-    <!-- SINGLE TWEET CONTAINER -->
-    <div class="container twt-container">
-      <div class="row">
-        <div class="col-auto">
-          <img src="source/blackpink_stan_icon.png" width="50" height="50" alt="">
+    <div id="composeTweetSection">
+      <div class="container h-100">
+        <div class="row">
+          <div class="col-auto pr-0">
+            <img src="source/icon.png" width="50" height="50" alt="">
+          </div>
+          <div class="col">
+            <form>
+              <div class="form-group">
+                <textarea id="composetweet" class="form-control" rows=5 placeholder="What's happening?" autocomplete="off"></textarea>
+              </div>
+            </form>
+          </div>
         </div>
-        <div class="col">
-          <div class="row mr-0">
-            <p class="display-name">D DAY-1 #HYLT</p>
-            <p class="username">@lalisamanoBANGS</p>
-            <i class="fas fa-chevron-down fa-grey ml-auto"></i>
-          </div>
-          <div class="row mr-0">
-            <p class="tweet">
-              BLACKPINK COMEBACK TOMORROW!1!!
-            </p>
-          </div>
-          <div class="row mr-0 pb-2">
-            <img src="source/bpmeme.jpeg" class="img-tweet" width="280" height="162">
-          </div>
-          <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
-            <i class="far fa-comment fa-grey"></i>
-            <i class="fas fa-retweet fa-grey"></i>
-            <i class="far fa-heart fa-grey"></i>
-            <i class="fas fa-share-square fa-grey"></i>
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-4 d-flex justify-content-around">
+            <i class="far fa-image fa-lg fa-blue"></i>
+            <i class="fas fa-chart-bar fa-lg fa-blue"></i>
+            <i class="far fa-calendar-alt fa-lg fa-blue"></i>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ANOTHER TWEET -->
-    <div class="container twt-container">
-      <div class="row">
-        <div class="col-auto">
-          <img src="source/cheems.png" width="50" height="50" alt="">
-        </div>
-        <div class="col">
-          <div class="row mr-0">
-            <p class="display-name">#JunkTerrorBill</p>
-            <p class="username">@cheemers</p>
-            <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+    <div id="tweetsSection">
+
+      <!-- SINGLE TWEET CONTAINER -->
+      <div class="container twt-container">
+        <div class="row">
+          <div class="col-auto">
+            <img src="source/blackpink_stan_icon.png" width="50" height="50" alt="">
           </div>
-          <div class="row mr-0">
-            <p class="tweet">
-              sobrang init walangya. hirap pa intindihin ng mga turotial ng bootstrap
-            </p>
-          </div>
-          <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
-            <i class="far fa-comment fa-grey"></i>
-            <i class="fas fa-retweet fa-grey"></i>
-            <i class="far fa-heart fa-grey"></i>
-            <i class="fas fa-share-square fa-grey"></i>
+          <div class="col">
+            <div class="row mr-0">
+              <p class="display-name">D DAY-1 #HYLT</p>
+              <p class="username">@lalisamanoBANGS</p>
+              <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+            </div>
+            <div class="row mr-0">
+              <p class="tweet">
+                BLACKPINK COMEBACK TOMORROW!1!!
+              </p>
+            </div>
+            <div class="row mr-0 pb-2">
+              <img src="source/bpmeme.jpeg" class="img-tweet" width="280" height="162">
+            </div>
+            <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
+              <i class="far fa-comment fa-grey"></i>
+              <i class="fas fa-retweet fa-grey"></i>
+              <i class="far fa-heart fa-grey"></i>
+              <i class="fas fa-share-square fa-grey"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ANOTHER UNIQUE TWEET -->
-    <div class="container twt-container">
-      <div class="row">
-        <div class="col-auto">
-          <img src="source/cat.png" width="50" height="50" alt="">
-        </div>
-        <div class="col">
-          <div class="row mr-0">
-            <p class="display-name">#MassTestingNowPH</p>
-            <p class="username">@cantwakeup</p>
-            <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+      <!-- ANOTHER TWEET -->
+      <div class="container twt-container">
+        <div class="row">
+          <div class="col-auto">
+            <img src="source/cheems.png" width="50" height="50" alt="">
           </div>
-          <div class="row mr-0">
-            <p class="tweet">
-              di pa rin aq marunong mag jquery XD
-            </p>
-          </div>
-          <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
-            <i class="far fa-comment fa-grey"></i>
-            <i class="fas fa-retweet fa-grey"></i>
-            <i class="far fa-heart fa-grey"></i>
-            <i class="fas fa-share-square fa-grey"></i>
+          <div class="col">
+            <div class="row mr-0">
+              <p class="display-name">#JunkTerrorBill</p>
+              <p class="username">@cheemers</p>
+              <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+            </div>
+            <div class="row mr-0">
+              <p class="tweet">
+                sobrang init walangya. hirap pa intindihin ng mga turotial ng bootstrap
+              </p>
+            </div>
+            <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
+              <i class="far fa-comment fa-grey"></i>
+              <i class="fas fa-retweet fa-grey"></i>
+              <i class="far fa-heart fa-grey"></i>
+              <i class="fas fa-share-square fa-grey"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ANOTHER UNIQUE TWEET -->
-    <div class="container twt-container">
-      <div class="row">
-        <div class="col-auto">
-          <img src="source/bakugou.png" width="50" height="50" alt="">
-        </div>
-        <div class="col">
-          <div class="row mr-0">
-            <p class="display-name">bakugo's toenail</p>
-            <p class="username">@kingbakugo</p>
-            <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+      <!-- ANOTHER UNIQUE TWEET -->
+      <div class="container twt-container">
+        <div class="row">
+          <div class="col-auto">
+            <img src="source/cat.png" width="50" height="50" alt="">
           </div>
-          <div class="row mr-0">
-            <p class="tweet">
-              &#x1F97A;
-            </p>
-          </div>
-          <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
-            <i class="far fa-comment fa-grey"></i>
-            <i class="fas fa-retweet fa-grey"></i>
-            <i class="far fa-heart fa-grey"></i>
-            <i class="fas fa-share-square fa-grey"></i>
+          <div class="col">
+            <div class="row mr-0">
+              <p class="display-name">#MassTestingNowPH</p>
+              <p class="username">@cantwakeup</p>
+              <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+            </div>
+            <div class="row mr-0">
+              <p class="tweet">
+                di pa rin aq marunong mag jquery XD
+              </p>
+            </div>
+            <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
+              <i class="far fa-comment fa-grey"></i>
+              <i class="fas fa-retweet fa-grey"></i>
+              <i class="far fa-heart fa-grey"></i>
+              <i class="fas fa-share-square fa-grey"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ANOTHER UNIQUE TWEET -->
-    <div class="container twt-container">
-      <div class="row">
-        <div class="col-auto">
-          <img src="source/blossom.png" width="50" height="50" alt="">
-        </div>
-        <div class="col">
-          <div class="row mr-0">
-            <p class="display-name">&#x1F3F3;&#xFE0F;&#x200D;&#x1F308;</p>
-            <p class="username">@lemonsqueaky</p>
-            <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+      <!-- ANOTHER UNIQUE TWEET -->
+      <div class="container twt-container">
+        <div class="row">
+          <div class="col-auto">
+            <img src="source/bakugou.png" width="50" height="50" alt="">
           </div>
-          <div class="row mr-0">
-            <p class="tweet">
-              skskksksksksk
-            </p>
-          </div>
-          <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
-            <i class="far fa-comment fa-grey"></i>
-            <i class="fas fa-retweet fa-grey"></i>
-            <i class="far fa-heart fa-grey"></i>
-            <i class="fas fa-share-square fa-grey"></i>
+          <div class="col">
+            <div class="row mr-0">
+              <p class="display-name">bakugo's toenail</p>
+              <p class="username">@kingbakugo</p>
+              <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+            </div>
+            <div class="row mr-0">
+              <p class="tweet">
+                &#x1F97A;
+              </p>
+            </div>
+            <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
+              <i class="far fa-comment fa-grey"></i>
+              <i class="fas fa-retweet fa-grey"></i>
+              <i class="far fa-heart fa-grey"></i>
+              <i class="fas fa-share-square fa-grey"></i>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- EMPTY CONTAINER AT THE END FOR TWEETS VISIBILITY -->
-    <div class="container pb-5"></div>
+      <!-- ANOTHER UNIQUE TWEET -->
+      <div class="container twt-container">
+        <div class="row">
+          <div class="col-auto">
+            <img src="source/blossom.png" width="50" height="50" alt="">
+          </div>
+          <div class="col">
+            <div class="row mr-0">
+              <p class="display-name">&#x1F3F3;&#xFE0F;&#x200D;&#x1F308;</p>
+              <p class="username">@lemonsqueaky</p>
+              <i class="fas fa-chevron-down fa-grey ml-auto"></i>
+            </div>
+            <div class="row mr-0">
+              <p class="tweet">
+                skskksksksksk
+              </p>
+            </div>
+            <div class="row mr-0 justify-content-between w-100" style="font-size: 1rem;">
+              <i class="far fa-comment fa-grey"></i>
+              <i class="fas fa-retweet fa-grey"></i>
+              <i class="far fa-heart fa-grey"></i>
+              <i class="fas fa-share-square fa-grey"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMPTY CONTAINER AT THE END FOR TWEETS VISIBILITY -->
+      <div class="container pb-5"></div>
+    </div>
 
     <!-- FLOATING ACTION BUTTON -->
-    <a href="tweet.html" class="fab shadow-sm"><i class="fas fa-feather-alt fa-lg fab-logo"></i></a>
+    <a href="#" id="composeButton" class="fab shadow-sm"><i class="fas fa-feather-alt fa-lg fab-logo"></i></a>
 
     <!-- BOTTOM NAVBAR -->
     <nav class="navbar navbar-expand fixed-bottom bg-light navbar-light justify-content-center border-top">
@@ -174,5 +204,7 @@
         <a class="nav-link" href=""><i class="far fa-envelope fa-lg"></i></a>
       </div>
     </nav>
+
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
