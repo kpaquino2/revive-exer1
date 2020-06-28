@@ -1,31 +1,35 @@
 function compose() {
     var topBarValue = $("#topBar").html("\
-    <a href=\"index.html\">\
+    <a href=\"index.html\" class=\" my-auto ml-3\">\
           <i class=\"fas fa-arrow-left fa-md fa-blue\"></i>\
         </a>\
-        <button type=\"button\" class=\"btn btn-primary btn-tweet font-weight-bold\" id=\"tweetButton\" disabled>Tweet</button>\
+        <button type=\"button\" class=\"btn btn-primary btn-tweet font-weight-bold my-auto mr-3\" id=\"tweetButton2\" disabled>Tweet</button>\
     ")
 
-    $("#tweetsSection").hide()
-    $("#composeTweetSection").show();
+    $("#tweetsSection").addClass("d-none")
+    $("#composeTweetSection").removeClass("d-none");
 
-    $(this).hide();
+    $(this).removeClass("d-sm-none d-block")
+    $(this).addClass("d-none")
 }
 
 function tweet() {
     var thetweet = $("#composetweet").val();
     
     var topBarValue = $("#topBar").html("\
-    <a href=\"#\">\
-        <img src=\"source/icon.png\" width=\"30\" height=\"30\" alt=\"\">\
-      </a>\
-      <span class=\"navbar-text font-weight-bold\">Home</span>\
-      <i class=\"far fa-moon fa-lg fa-blue\"></i>\
+            <img src=\"source/icon.png\" class=\"d-block d-sm-none my-auto ml-3\" width=\"30\" height=\"30\">\
+            <span class=\"font-weight-bold my-auto mx-3\">Home</span>\
+            <i class=\"far fa-moon fa-lg fa-blue my-auto mr-3\"></i>\
     ")
 
-    $("#tweetsSection").show()
-    $("#composeTweetSection").hide();
-    $("#composeButton").show();
+    $("#tweetsSection").removeClass("d-none");
+    $("#composeButton").removeClass("d-none");
+    $("#composeButton").addClass("d-sm-none d-block");
+    if($(window).width() < 576){
+      $("#composeTweetSection").addClass("d-none");
+    } else {
+      $("#composeTweetSection").removeClass("d-none");
+    }
 
     $("#tweetsSection").prepend("\
     <div class=\"container twt-container\">\
@@ -56,19 +60,38 @@ function tweet() {
     ")
 
     $("#composetweet").val("");
+    $("#tweetButton1").attr("disabled", true)
+    $("#tweetButton2").attr("disabled", true)
 
 }
 
 $('#composetweet').on('change keyup paste', function() {
     if($("#composetweet").val()) {
-        $("#tweetButton").removeAttr("disabled")
+        $("#tweetButton1").removeAttr("disabled")
+        $("#tweetButton2").removeAttr("disabled")
     }else {
-        $("#tweetButton").attr("disabled", true)
+        $("#tweetButton1").attr("disabled", true)
+        $("#tweetButton2").attr("disabled", true)
     }
 });
 
-$("#composeTweetSection").hide();
+$(window).on("resize load",function(){
+  if($(window).width() < 576){
+    $("#composeTweetSection").addClass("d-none");
+  } else {
+    $("#composeTweetSection").removeClass("d-none");
+  }
 
-$("body").on("click", "#tweetButton", tweet);
+  if($(window).width() > 1200){
+    $("#sideBar").addClass("mr-5")
+  } else {
+    $("#sideBar").removeClass("mr-5")
+  }
+});
+
+
+
+$("body").on("click", "#tweetButton1", tweet);
+$("body").on("click", "#tweetButton2", tweet);
 
 $("#composeButton").click(compose);
